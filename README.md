@@ -4,9 +4,9 @@
 DeepShape is a supervised deep-learning framework that predicts the shapes of isolated radio galaxies from their dirty images and associated PSFs. DeepShape is made of two modules. The first module uses a plug-and-play (PnP) algorithm based on the Half-Quadratic Splitting (HQS) method to reconstruct galaxy images. The second module is a measurement network trained to predict galaxy shapes from the reconstructed image-PSF pairs. The measurement network is divided into two branches: one is a feature extraction branch, which employs an equivariant convolutional neural network (CNN) to extract features from the reconstructed image, while the other is a pre-trained encoder block that compresses the PSF into a low-dimensional code, accounting for PSF-dependent errors. The outputs of both branches are combined and passed through a dense layer block to predict the ellipticity.
 
 ## Related Papers
-1. Image Reconstruction: Zhang et al (2021) https://arxiv.org/abs/2008.13751
+1. Image Reconstruction: [Zhang et al (2021)](https://arxiv.org/abs/2008.13751)
 2. E(2) Equivariant CNN: Cohen and Weiling (2016) https://arxiv.org/abs/1602.07576
-3.  `Fan et al. (2022) <https://arxiv.org/pdf/2202.14009.pdf>`_.
+
 
 ## Requirements
 The entire system is contained within a docker image, for which the Dockerfile is within this repository. To run: 
