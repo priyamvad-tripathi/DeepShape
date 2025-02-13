@@ -1,3 +1,6 @@
+# This file may be used to create a conda environment using:
+# conda env create --name <env-name> --file implemenation.yml
+
 name: implementation
 channels:
   - conda-forge
@@ -94,7 +97,7 @@ dependencies:
       - deepinv==0.2.1
       - docker-pycreds==0.4.0
       - einops==0.8.0
-      - escnn==1.0.13
+      #- escnn==1.0.13
       - filelock==3.13.4
       - fonttools==4.51.0
       - fsspec==2024.3.1
@@ -130,7 +133,7 @@ dependencies:
       - pillow==10.3.0
       - protobuf==5.28.1
       - ptwt==0.1.9
-      - py3nj==0.2.1
+        # - py3nj==0.2.1
       - pybind11==2.13.1
       - pyerfa==2.0.1.4
       - pymanopt==2.2.0
