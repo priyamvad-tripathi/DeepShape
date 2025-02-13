@@ -9,27 +9,36 @@ DeepShape is based on the findings presented in the following papers:
 
 ## Related Papers
 1. Image Reconstruction: [Zhang et al (2017)](https://arxiv.org/abs/1704.03264); [Zhang et al (2021)](https://arxiv.org/abs/2008.13751)
-2. E(2) Equivariant CNN: [Cohen and Welling (2016)](https://arxiv.org/abs/1602.07576); [Cohen and Welling (2016)](https://arxiv.org/abs/1612.08498); [Weiler and Cesa (2019)](https://arxiv.org/abs/1911.08251)
+2. E(2) Equivariant CNN: [Cohen and Welling (2016)](https://arxiv.org/abs/1612.08498); [Weiler and Cesa (2019)](https://arxiv.org/abs/1911.08251)
 
 
-## Requirements
-The entire system is contained within a docker image, for which the Dockerfile is within this repository. To run: 
+## Installation
+ 
 1. Clone repository
-2. Install docker
-3. Build docker image using the command > docker build -t <image_name> .
-4. Run the image using > docker run -p 8888:8888 -v <host_directory>:<container_directory> -it <image_name>
-5. The docker container will start. You can then run RASCIL from its home directory, as all the required julia files will be copied there.
-6. Example commands for execution can be found in the README.rascil file. Simulated datasets can be found in the various data directories. 
+2. Install [Anaconda](https://docs.anaconda.com/anaconda/install/)/[Miniconda](https://docs.anaconda.com/miniconda/install/)
+3. Install git and clone repository
+  ````
+  conda update conda
+  conda install git
+  git clone https://github.com/priyamvad-tripathi/DeepShape.git
+  ````
+4. Create a conda environment and install all the required dependencies by running the following commands:
+  ````
+  cd DeepShape/Requirements/
+  conda env create --name <env-name> --file implementation.yml
+  ````
+5. Install the (_escnn_)[https://github.com/QUVA-Lab/escnn?tab=readme-ov-file] package in the conda environment. This package is required to build the equivariant CNN.
+6. **Optional** Create a separate conda environment for simulating datasets:
+  ````
+  cd DeepShape/Requirements/
+  conda env create --name <env-name> --file simulation.yml
+  ````
+7. **Optional** Install the (_RASCIL_)[https://gitlab.com/ska-telescope/external/rascil-main] package in the simulation environment. This can be done by using the following commands:
+  ````
+  git clone https://gitlab.com/ska-telescope/external/rascil-main
+  cd rascil-main
+  git checkout tags/1.1.0
+  make install_requirements
+  ````
+8. **Optional** For comparison with the RadioLensfit method, install the (_RadioLensift2_)[https://github.com/marziarivi/RadioLensfit2/tree/master] package.
 
-## Splitting measurement sets
-Measurement sets can be split using casa. Specifically, one can use casatools.ms, for which documentation can be found: https://casadocs.readthedocs.io/en/stable/api/tt/casatools.ms.html#casatools.ms
-Update: The dirty.ipynb notebook has been updated to also be able to split the datasets
-
-## Results
-The results for the paper are presented in a variety of jupyter notebooks. These are:
-- dirty.ipynb for presenting the original datasets and their split
-- lambda.ipynb for preliminary experiments on $\lambda$
-- noise.ipynb for preliminary experiments and estimation of $\sigma^2$ and $\eta^2$
-- split.ipynb for results regarding partition configurations, and against the single-step LASSO reconstruction
-
-The raw data for our results will be made available in the near future
