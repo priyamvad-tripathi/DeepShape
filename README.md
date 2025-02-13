@@ -27,18 +27,17 @@ DeepShape is based on the findings presented in the following papers:
   cd DeepShape/Requirements/
   conda env create --name <env-name> --file implementation.yml
   ````
-5. Install the (_escnn_)[https://github.com/QUVA-Lab/escnn?tab=readme-ov-file] package in the conda environment. This package is required to build the equivariant CNN.
-6. **Optional** Create a separate conda environment for simulating datasets:
+5. Install the [_escnn_](https://github.com/QUVA-Lab/escnn/) package in the conda environment. This package is required to build the equivariant CNN.
+6. **[Optional]** Create a separate conda environment for simulating datasets:
   ````
   cd DeepShape/Requirements/
   conda env create --name <env-name> --file simulation.yml
   ````
-7. **Optional** Install the (_RASCIL_)[https://gitlab.com/ska-telescope/external/rascil-main] package in the simulation environment. This can be done by using the following commands:
+7. **[Optional]** Install the [_RASCIL_](https://gitlab.com/ska-telescope/external/rascil-main) package in the simulation environment. This can be done by using the following commands:
   ````
   git clone https://gitlab.com/ska-telescope/external/rascil-main
   cd rascil-main
   git checkout tags/1.1.0
   make install_requirements
   ````
-8. **Optional** For comparison with the RadioLensfit method, install the (_RadioLensift2_)[https://github.com/marziarivi/RadioLensfit2/tree/master] package.
-
+8. **[Optional]** Install the [RadioLensfit](https://github.com/marziarivi/RadioLensfit2/) package for comparison.
