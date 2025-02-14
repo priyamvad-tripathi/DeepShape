@@ -7,11 +7,6 @@ DeepShape is based on the findings presented in the following papers:
 1. Shape measurement of radio galaxies using Equivariant CNNs: [Tripathi et al (2024)](https://ieeexplore.ieee.org/abstract/document/10715370)
 2. DeepShape: Radio Weak Lensing Shear Measurements using Deep Learning: tbd
 
-## Related Papers
-1. Image Reconstruction: [Zhang et al (2017)](https://arxiv.org/abs/1704.03264); [Zhang et al (2021)](https://arxiv.org/abs/2008.13751)
-2. E(2) Equivariant CNN: [Cohen and Welling (2016)](https://arxiv.org/abs/1612.08498); [Weiler and Cesa (2019)](https://arxiv.org/abs/1911.08251)
-
-
 ## Installation
  
 1. Clone repository
@@ -50,3 +45,12 @@ DeepShape is based on the findings presented in the following papers:
 ## Usage
 ### Dataset simulation
 All the necessary scripts for simulating the training and testing datasets can be found in the [Simulation](Simulation/) folder. Make sure to download all the FITS files containing the [T-RECS catalog](http://cdsarc.u-strasbg.fr/ftp/VII/282/fits/) and run the [make_catalog.py](Simulation/make_catalog.py) script to join all the FITS file into a single pandas dataframe containing only the required information. 
+
+
+## Useful Resources
+1. Image Reconstruction: [Zhang et al (2017)](https://arxiv.org/abs/1704.03264); [Zhang et al (2021)](https://arxiv.org/abs/2008.13751)
+2. E(2) Equivariant CNN: [Cohen and Welling (2016)](https://arxiv.org/abs/1612.08498); [Weiler and Cesa (2019)](https://arxiv.org/abs/1911.08251)
+3. T-RECS catalogue: [Bonaldi et al (2018)](https://academic.oup.com/mnras/article/482/1/2/5108200) 
+4. [_escnn_ Documentation](https://quva-lab.github.io/escnn/) (For building $\mathrm{E}(2)$ equivariant CNNs)
+5. [_RASCIL_ Documentation](https://rascil-main.readthedocs.io/en/1.1.0/index.html) (For visibility simulations)
+6. Contemporary Methods: [SuperCALS method](https://academic.oup.com/mnras/article/495/2/1737/5815095); [RadioLensfit Method](https://www.sciencedirect.com/science/article/pii/S2213133722000191)
