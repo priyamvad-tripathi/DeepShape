@@ -1,11 +1,15 @@
+"""
+Main module for simulating galaxies.
+All images are simulated on 128x128 pixel grids with a cell size of 6.93e-07 radians by default.
+"""
+
 # %%
 import copy
 
 import galsim
 import numpy as np
-from ska_sdp_func_python.image import deconvolve_cube
-
 import visibilities
+from ska_sdp_func_python.image import deconvolve_cube
 
 # %% Deconv Setup
 

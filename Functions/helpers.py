@@ -1,3 +1,8 @@
+"""
+Helper functions for the DeepShape project.
+Specify the path to the T-RECS catalog.
+"""
+
 # %%
 import copy
 import pickle

@@ -1,3 +1,7 @@
+"""
+This script reads the FITS files from the T-RECS catalog and converts them into a pandas DataFrame.
+"""
+
 # %%
 import copy
 

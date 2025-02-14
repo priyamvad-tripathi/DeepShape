@@ -1,3 +1,9 @@
+"""
+Functions related to visibility data and generation. Calculations are made based on SKA-MID dishes.
+Obseravtion parameters default to values used in DeepShape Paper.
+Make sure to install RASCIL 1.1.0 before running this code. Latest versions might give errors.
+"""
+
 import numpy as np
 from astropy import units as u
 from astropy.coordinates import SkyCoord
