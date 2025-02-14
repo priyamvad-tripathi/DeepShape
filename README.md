@@ -1,5 +1,5 @@
 # DeepShape
-**Radio Weak Lensing Shear Measurements using Deep Learning**
+## Radio Weak Lensing Shear Measurements using Deep Learning
 
 DeepShape is a supervised deep-learning framework that predicts the shapes of isolated radio galaxies from their dirty images and associated PSFs. DeepShape is made of two modules. The first module uses a plug-and-play (PnP) algorithm based on the Half-Quadratic Splitting (HQS) method to reconstruct galaxy images. The second module is a measurement network trained to predict galaxy shapes from the reconstructed image-PSF pairs. The measurement network is divided into two branches: one is a feature extraction branch, which employs an equivariant convolutional neural network (CNN) to extract features from the reconstructed image, while the other is a pre-trained encoder block that compresses the PSF into a low-dimensional code, accounting for PSF-dependent errors. The outputs of both branches are combined and passed through a dense layer block to predict the ellipticity.
 
@@ -49,4 +49,4 @@ DeepShape is based on the findings presented in the following papers:
 
 ## Usage
 ### Simulations
-All the necessary scripts for simulating the training and testing datasets can be found in [Simulation](Simulation/) folder. Make sure to download all the FITS files containing the [T-RECS catalog](http://cdsarc.u-strasbg.fr/ftp/VII/282/fits/) and run the [make_catalog.py](Simulation/make_catalog.py) script to join all the FITS file into a single pandas dataframe containing only the required information. 
+All the necessary scripts for simulating the training and testing datasets can be found in the [Simulation](Simulation/) folder. Make sure to download all the FITS files containing the [T-RECS catalog](http://cdsarc.u-strasbg.fr/ftp/VII/282/fits/) and run the [make_catalog.py](Simulation/make_catalog.py) script to join all the FITS file into a single pandas dataframe containing only the required information. 
