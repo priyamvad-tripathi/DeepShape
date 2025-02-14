@@ -28,7 +28,12 @@ DeepShape is based on the findings presented in the following papers:
   conda env create --name <env-name> --file implementation.yml
   ````
 5. Install the [_escnn_](https://github.com/QUVA-Lab/escnn/) package in the conda environment. This package is required to build the equivariant CNN.
-6. **[Optional]** Create a separate conda environment for simulating datasets:
+   This can be done by using the following command:
+   ````
+   pip install git+https://github.com/QUVA-Lab/escnn
+   ````
+   > **WARNING**: Install version 1.0.13 of _escnn_. The installation might require a separate installation of the _lie_learn_ and _py3nj_ libraries.
+7. **[Optional]** Create a separate conda environment for simulating datasets:
   ````
   cd DeepShape/Requirements/
   conda env create --name <env-name> --file simulation.yml
