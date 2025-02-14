@@ -48,5 +48,5 @@ DeepShape is based on the findings presented in the following papers:
 8. **[Optional]** Install the [RadioLensfit](https://github.com/marziarivi/RadioLensfit2/) package for comparison.
 
 ## Usage
-### Simulations
+### Dataset simulation
 All the necessary scripts for simulating the training and testing datasets can be found in the [Simulation](Simulation/) folder. Make sure to download all the FITS files containing the [T-RECS catalog](http://cdsarc.u-strasbg.fr/ftp/VII/282/fits/) and run the [make_catalog.py](Simulation/make_catalog.py) script to join all the FITS file into a single pandas dataframe containing only the required information. 
