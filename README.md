@@ -46,6 +46,18 @@ DeepShape is based on the findings presented in the following papers:
 ### Dataset simulation
 All the necessary scripts for simulating the training and testing datasets can be found in the [Simulation](Simulation/) folder. Make sure to download all the FITS files containing the [T-RECS catalog](http://cdsarc.u-strasbg.fr/ftp/VII/282/fits/) and run the [make_catalog.py](Simulation/make_catalog.py) script to join all the FITS file into a single pandas dataframe containing only the required information. 
 
+## Cite
+You can cite our work using the following $\BibTeX{}$ entry:
+ ````
+@INPROCEEDINGS{Tripathi2024,
+  author={Tripathi, Priyamvad and Wang, Sunrise and Prunet, Simon and Ferrari, André},
+  booktitle={EUSIPCO}, 
+  title={Shape measurement of radio galaxies using Equivariant CNNs}, 
+  year={2024},
+  pages={2377-2381},
+  doi={10.23919/EUSIPCO63174.2024.10715370}}
+ ````
+Feel free to [contact us](mailto:priyamvad.tripathi@oca.eu).
 
 ## Useful Resources
 1. Image Reconstruction: [Zhang et al (2017)](https://arxiv.org/abs/1704.03264); [Zhang et al (2021)](https://arxiv.org/abs/2008.13751)
