@@ -45,6 +45,8 @@ DeepShape is based on the findings presented in the following papers:
 ## Usage
 ### Dataset simulation
 All the necessary scripts for simulating the training and testing datasets can be found in the [Simulation](Simulation/) folder. Make sure to download all the FITS files containing the [T-RECS catalog](http://cdsarc.u-strasbg.fr/ftp/VII/282/fits/) and run the [make_catalog.py](Simulation/make_catalog.py) script to join all the FITS file into a single pandas dataframe containing only the required information. 
+### Image Reconstruction
+The [Reconstruction](Reconstruction/) folder contains the scripts connected to image reconstruction using HQS-PnP algorithm. Make sure that the _DeepInverse_ library is correctly installed. By default, DRUNET is initialized using pre-trained weights from the library. This can be changed by setting the "pretrained" argument to a path containing the user-weights (see [PnP_tuning.py](Reconstruction/PnP_tuning.py) for details)
 
 ## Cite
 You can cite our work using the following $\BibTeX{}$ entry:
