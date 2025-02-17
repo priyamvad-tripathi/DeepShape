@@ -63,6 +63,7 @@ Feel free to [contact us](mailto:priyamvad.tripathi@oca.eu).
 1. Image Reconstruction: [Zhang et al (2017)](https://arxiv.org/abs/1704.03264); [Zhang et al (2021)](https://arxiv.org/abs/2008.13751)
 2. E(2) Equivariant CNN: [Cohen and Welling (2016)](https://arxiv.org/abs/1612.08498); [Weiler and Cesa (2019)](https://arxiv.org/abs/1911.08251)
 3. T-RECS catalogue: [Bonaldi et al (2018)](https://academic.oup.com/mnras/article/482/1/2/5108200) 
-4. [_escnn_ Documentation](https://quva-lab.github.io/escnn/) (For building $\mathrm{E}(2)$ equivariant CNNs)
-5. [_RASCIL_ Documentation](https://rascil-main.readthedocs.io/en/1.1.0/index.html) (For visibility simulations)
-6. Contemporary Methods: [SuperCALS method](https://academic.oup.com/mnras/article/495/2/1737/5815095); [RadioLensfit Method](https://www.sciencedirect.com/science/article/pii/S2213133722000191)
+4. [_escnn_ Documentation](https://quva-lab.github.io/escnn/): For building $\mathrm{E}(2)$ equivariant CNNs
+5. [_RASCIL_ Documentation](https://rascil-main.readthedocs.io/en/1.1.0/index.html): For visibility simulations
+6. [_DeepInverse_ Library](https://github.com/deepinv/deepinv/): For building DRUNet with pre-learned weights
+7. Contemporary Methods: [SuperCALS method](https://academic.oup.com/mnras/article/495/2/1737/5815095); [RadioLensfit Method](https://www.sciencedirect.com/science/article/pii/S2213133722000191)
