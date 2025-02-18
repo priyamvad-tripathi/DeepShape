@@ -49,6 +49,8 @@ All the necessary scripts for simulating the training and testing datasets can b
 The [Reconstruction/](Reconstruction/) folder contains the scripts connected to image reconstruction using HQS-PnP algorithm. Make sure that the _DeepInverse_ library is correctly installed. By default, DRUNET is initialized using pre-trained weights from the library. This can be changed by setting the "pretrained" argument to a path containing the user-weights (see [PnP_tuning.py](Reconstruction/PnP_tuning.py) for details)
 ### Shape Measurement
 The [Shape_Measurement/](Shape_Measurement/) folder contains the scripts connected to the shape measurement network.
+### Model Weights
+DeepShape uses three networks: DRUNet denoiser, PSF autoencoder, and the shape measurement network. The trained weights for all three networks can be found at [OCA Cloud](https://cloud.oca.eu/index.php/s/KbMB8SbingdWibe).
 
 ## Cite
 You can cite our work using the following $\BibTeX{}$ entry:
