@@ -7,7 +7,7 @@ Ensure that the path to the autoencoder model and the training/test sets is coor
 import random
 import sys
 
-sys.path.insert("../Functions")
+sys.path.append("../Functions")
 
 
 import copy
@@ -23,12 +23,13 @@ from escnn import gspaces, nn
 # %% Define Paths
 DIR = "/scratch/tripathi/"
 
-loc_weights = DIR + "Model_Weights/network.pt"
-loc_train_set = DIR + "Data/dataset_dirty_train_sers.h5"
-loc_eq = DIR + "Model_Weights/base_eq.pt"  # Path to pre-trained model
-
-# Path to test sets
-PATH_TEST = DIR + "Data/test_set.h5"
+loc_weights = DIR + "Model_Weights/network.pt"  # Path to save model weights
+loc_train_set = DIR + "Data/dataset_dirty_train_sers.h5"  # Path to training set
+loc_eq = DIR + "Model_Weights/base_eq.pt"  # Path to pre-trained model weights
+loc_autoencoder = (
+    DIR + "Model_Weights/autoencoder_jit.pt"
+)  # Path to autoencoder model (JIT)
+PATH_TEST = DIR + "Data/test_set.h5"  # Path to test sets
 
 # Load Data
 train_loader, val_loader = torch_func.dataloader(
@@ -132,7 +133,7 @@ if loc_eq:
 
 # Load encoder
 autoencoder = torch.jit.load(
-    DIR + "Model_Weights/autoencoder_jit.pt",
+    loc_autoencoder,
     map_location=f"cuda:{ndev}",
 )
 autoencoder.eval()

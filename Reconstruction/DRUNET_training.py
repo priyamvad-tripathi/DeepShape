@@ -27,7 +27,7 @@ from torch_func import load_ckp, save_ckp
 from tqdm import tqdm
 
 # PATH to save the model
-filename = "/scratch/tripathi/Model_Weights/DRUNET/drunet_fine_1e5.pt"
+filename = "/scratch/tripathi/Model_Weights/DRUNET/drunet.pt"
 # PATH to training set
 PATH_TRAIN_SET = "/scratch/tripathi/Data/true_sers_1M.h5"
 
@@ -40,53 +40,10 @@ def normalize(X_t):
     return (X_t - X_t.min()) / (X_t.max() - X_t.min())
 
 
+# Initialize model with pre-trained weights
+# See deepinv.models.DRUNet for more details.
+# If pretrained is set to None, the model will be initialized with random weights.
 net = DRUNet(in_channels=1, out_channels=1, pretrained="download", device=device)
-
-"""
-with open("/scratch/tripathi/Data/psu_arr.pkl", "rb") as fh:
-    psu_arr = pickle.load(fh)
-
-with open("/scratch/tripathi/Data/mu.pkl", "rb") as fh:
-    mu = pickle.load(fh)
-# %% Trial
-
-true = raw_images[:5]
-sigma = 1e-7
-noisy = true + np.random.normal(0, sigma, true.shape).astype("float32")
-noisy_T = torch.tensor(noisy).to(device).unsqueeze(1)
-recon = net(noisy_T, sigma=sigma)
-caption = [f"{10*np.log10(np.max(im)/sigma):.02f} dB" for im in true]
-plot([true, noisy, recon.detach().cpu().numpy()], caption=caption)
-
-# Shape constraint
-psu_tensor = torch.from_numpy(psu_arr).to(device).unsqueeze(2)
-
-
-def shape_constraint(ypred, ytrue, psu_tensor=psu_tensor):
-    residual = ypred - ytrue
-    psu_tensor = psu_tensor.unsqueeze(2).repeat(1, 1, residual.shape[0], 1, 1, 1)
-    shape_constraint = 0
-    for i in range(6):
-        for j in range(psu_tensor.shape[1]):
-            shape_constraint += (
-                mu[i, j]
-                * (torch.sum(residual * psu_tensor[i, j], dim=(1, 2, 3))) ** 2
-                / 2.0
-            )
-    return torch.mean(shape_constraint)
-
-
-def modified_loss(ypred, ytrue, gamma=0.01):
-    data_fidelity = torch.nn.MSELoss()(ypred, ytrue)
-    shape_cons = shape_constraint(ypred, ytrue)
-    return data_fidelity + gamma * shape_cons
-
-
-if use_shape_constraint:
-    criterion = modified_loss
-else:
-    criterion = torch.nn.MSELoss()
-"""
 
 
 # %% Build torch loader
