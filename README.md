@@ -55,6 +55,17 @@ DeepShape uses three networks: DRUNet denoiser, PSF autoencoder, and the shape m
 ## Cite
 You can cite our work using the following $\BibTeX{}$ entry:
  ````
+ @article{DeepShape,
+	author = {{Tripathi, P.} and {Wang, S.} and {Prunet, S.} and {Ferrari, A.}},
+	title = {DeepShape: Radio weak-lensing shear measurements using deep learning},
+	DOI= "10.1051/0004-6361/202554072",
+	journal = {A&A},
+	year = 2025,
+	volume = 696,
+	pages = "A216",
+}
+````
+ ````
 @INPROCEEDINGS{Tripathi2024,
   author={Tripathi, Priyamvad and Wang, Sunrise and Prunet, Simon and Ferrari, André},
   booktitle={EUSIPCO}, 
