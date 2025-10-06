@@ -5,7 +5,7 @@ DeepShape is a supervised deep-learning framework that predicts the shapes of is
 
 DeepShape is based on the findings presented in the following papers:
 1. Shape measurement of radio galaxies using Equivariant CNNs: [Tripathi et al (2024)](https://ieeexplore.ieee.org/abstract/document/10715370)
-2. DeepShape: Radio Weak Lensing Shear Measurements using Deep Learning: tbd
+2. DeepShape: Radio Weak Lensing Shear Measurements using Deep Learning: [Tripathi et al (2025)](https://www.aanda.org/articles/aa/full_html/2025/04/aa54072-25/aa54072-25.html)
 
 ## Installation
  
@@ -55,15 +55,19 @@ DeepShape uses three networks: DRUNet denoiser, PSF autoencoder, and the shape m
 ## Cite
 You can cite our work using the following $\BibTeX{}$ entry:
  ````
- @article{DeepShape,
-	author = {{Tripathi, P.} and {Wang, S.} and {Prunet, S.} and {Ferrari, A.}},
-	title = {DeepShape: Radio weak-lensing shear measurements using deep learning},
-	DOI= "10.1051/0004-6361/202554072",
-	journal = {A&A},
-	year = 2025,
-	volume = 696,
-	pages = "A216",
+@ARTICLE{DeepShape,
+       author = {{Tripathi}, P. and {Wang}, S. and {Prunet}, S. and {Ferrari}, A.},
+        title = "{DeepShape: Radio weak-lensing shear measurements using deep learning}",
+      journal = {\aap},
+         year = 2025,
+        month = apr,
+       volume = {696},
+          eid = {A216},
+        pages = {A216},
+          doi = {10.1051/0004-6361/202554072},
 }
+
+
 ````
  ````
 @INPROCEEDINGS{Tripathi2024,
